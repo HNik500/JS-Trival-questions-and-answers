@@ -130,14 +130,33 @@ console.log(" prime number")
  }
 checkprime(5);
 
-// prime no 2
-// function checkprime2(n){
-//     if(n >= 1 ){
-//     for(let i = 2; i < n; i++ ){
-//         if(n % i === 0 ){
-//            return "not a prime number"
-//         } else   return "prime no! " 
-//     }
-//     }
-// }
-// console.log (  checkprime2(3) ) 
+/* / * prime no 2
+function checkprime2(n){
+    if(n >= 1 ){
+    for(let i = 2; i < n; i++ ){
+        if(n % i === 0 ){
+           return "not a prime number"
+        } else   return "prime no! " 
+    }
+    }
+}
+console.log (  checkprime2(3) )  */ 
+//fibonacci sequence using formula ezy
+function fibo(a) {
+    let sigma = 1.618;
+    let fibseries =  Math.ceil( ( ( (sigma)**a ) - (1-sigma)**a ) / Math.sqrt(5) ) ;
+    return fibseries;
+}
+console.log ( fibo(2) )
+
+// fibb using non- formula method
+function fibonacci(n) {
+    let fib = [0, 1];
+    for (let i = 2; i <= n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+    return fib[n];
+}
+
+// Example usage
+console.log(fibonacci(10)); // Output: 55
